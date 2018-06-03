@@ -6,7 +6,7 @@ How to open:
 
 3. Install NPM
 
-4. npm install -g
+4. npm install
 
 5. heroku git:clone -a fathomless-earth-13428
 
