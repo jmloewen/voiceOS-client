@@ -1,0 +1,2 @@
+# vosc
+ Client for VoiceOS
