@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {componentViewStyles} from '../constants';
 
 const mapStateToProps = (state) => ({
   //TODO
@@ -7,8 +8,12 @@ const mapStateToProps = (state) => ({
 
 class WebspeechLog extends Component {
   render() {
+
+    const {
+      webspeechStyle
+    } = componentViewStyles;
     return (
-      <h1>I am WebspeechLog</h1>
+      <h1 style={webspeechStyle}>I am WebspeechLog</h1>
     )
   }
 }

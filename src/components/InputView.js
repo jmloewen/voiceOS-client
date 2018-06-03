@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {componentViewStyles} from '../constants';
 
 const mapStateToProps = (state) => ({
   //TODO
@@ -7,8 +8,14 @@ const mapStateToProps = (state) => ({
 
 class InputView extends Component {
   render() {
+
+    const {
+      inputStyle
+    } = componentViewStyles;
+
+
     return (
-      <h1>I am InputView</h1>
+      <h1 style={inputStyle}>I am InputView</h1>
     )
   }
 }
