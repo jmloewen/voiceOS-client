@@ -3,12 +3,14 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => ({
   //TODO
+  ...state.voiceReducer
 })
 
 class WebspeechLog extends Component {
   render() {
+
     return (
-      <h1>I am WebspeechLog</h1>
+      <h1>{JSON.stringify(this.props)}</h1>
     )
   }
 }
