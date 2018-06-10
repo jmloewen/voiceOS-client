@@ -2,8 +2,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {componentViewStyles} from '../constants';
 
+
+import CurrentDirectory from './CurrentDirectory'
+import ImageBox from './ImageBox'
+
 const mapStateToProps = (state) => ({
-  //TODO
+  // TODO
 })
 
 class OutputView extends Component {
@@ -12,15 +16,14 @@ class OutputView extends Component {
     const {
       outputContainer,
       outputHeader,
-      outputImageContainer,
-      outputImage
+      outputImageContainer
     } = componentViewStyles;
 
     return (
       <div style={outputContainer}>
-        <h2 style={outputHeader}>Current Directory</h2>
+        <CurrentDirectory style={outputHeader} />
         <div style={outputImageContainer}>
-          <img style={outputImage} src="#"/>
+          <ImageBox/>
         </div>
       </div>
     );

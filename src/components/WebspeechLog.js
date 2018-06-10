@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import {componentViewStyles} from '../constants';
 
 const mapStateToProps = (state) => ({
-  //TODO
+  // TODO
+  ...state.voiceReducer
 })
 
 class WebspeechLog extends Component {
@@ -15,7 +16,7 @@ class WebspeechLog extends Component {
     } = componentViewStyles;
     return (
       <div style={webspeechContainer}>
-        <h2 style={webspeechTitle}>I am WebspeechLog</h2>
+        <h2 style={webspeechTitle}>{JSON.stringify(this.props)}</h2>
         <p style={webspeechOutput}>This is Output</p>
       </div>
     )

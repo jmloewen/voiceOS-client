@@ -6,7 +6,7 @@ class OutputViewContainer extends Component {
 
   render() {
     return (
-      <OutputView/>
+      <OutputView />
     )
   }
 }

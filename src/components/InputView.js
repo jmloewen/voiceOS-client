@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {componentViewStyles} from '../constants';
+import {componentViewStyles} from '../constants'
+import ServerStatus from './ServerStatus'
+import VoiceButton from './VoiceButton'
 
 const mapStateToProps = (state) => ({
-  //TODO
+  // TODO
 })
 
 class InputView extends Component {
@@ -17,9 +19,10 @@ class InputView extends Component {
 
 
     return (
-      <div style={inputContainer}>
-        <h2 style={inputHeader}>Tap & Speak</h2>
-        <button style={inputButton}>Voice Button</button>
+      <div className='inputContainer'>
+        <h2>I am InputView</h2>
+        <ServerStatus style={inputHeader} />
+        <VoiceButton style={inputButton} />
       </div>
     )
   }

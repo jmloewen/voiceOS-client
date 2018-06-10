@@ -4,24 +4,16 @@ import OutputViewContainer from './OutputViewContainer'
 import InputViewContainer from './InputViewContainer'
 import WebspeechLogContainer from './WebspeechLogContainer'
 
-const getStyles = () => ({
-  temp:{
-    float:'left'
-  }
-})
-
-const VoiceOSClient = () => {
-  const styles = getStyles()
-
-
+class VoiceOSClient extends Component {
+  render () {
     return (
       <div className='ClientLayout'>
-        <OutputViewContainer/>
-        <WebspeechLogContainer/>
-        <InputViewContainer/>
-
+        <OutputViewContainer />
+        <InputViewContainer />
+        <WebspeechLogContainer />
       </div>
     )
+  }
 }
 
 export default VoiceOSClient

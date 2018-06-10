@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import WebspeechLog from '../components/WebspeechLog'
 
 class WebspeechLogContainer extends Component {
-  render() {
+  render () {
     return (
       <WebspeechLog />
     )

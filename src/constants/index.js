@@ -6,7 +6,8 @@ export const componentViewStyles = {
       color:'green'
     },
     outputImage:{
-
+      width:'inherit',
+      height:'inherit'
     },
     outputImageContainer:{
       border:'1px solid black'

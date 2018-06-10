@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux'
+import { socketReducer } from './socketReducer'
+import { voiceReducer } from './VoiceReducer'
 
 const rootReducer = combineReducers({
-  // ,[ANOTHER REDUCER], [ANOTHER REDUCER] ....
+  socketReducer,
+  voiceReducer
 })
 
 export default rootReducer
