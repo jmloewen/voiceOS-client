@@ -4,16 +4,16 @@ import ServerStatus from './ServerStatus'
 import VoiceButton from './VoiceButton'
 
 const mapStateToProps = (state) => ({
-  //TODO
+  // TODO
 })
 
 class InputView extends Component {
-  render() {
+  render () {
     return (
       <div className='InputView'>
         <h1>I am InputView</h1>
-        <ServerStatus/>
-        <VoiceButton/>
+        <ServerStatus />
+        <VoiceButton />
       </div>
     )
   }

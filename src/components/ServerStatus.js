@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => ({
-  //TODO
+  // TODO
 })
 
 class ServerStatus extends Component {
-  render() {
+  render () {
     return (
       <div className='ServerStatus'>
         <h3>ServerStatus: </h3>

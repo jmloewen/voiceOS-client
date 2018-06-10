@@ -6,12 +6,12 @@ import InputViewContainer from './InputViewContainer'
 import WebspeechLogContainer from './WebspeechLogContainer'
 
 class VoiceOSClient extends Component {
-  render() {
+  render () {
     return (
       <div className='ClientLayout'>
-        <OutputViewContainer/>
-        <InputViewContainer/>
-        <WebspeechLogContainer/>
+        <OutputViewContainer />
+        <InputViewContainer />
+        <WebspeechLogContainer />
       </div>
     )
   }

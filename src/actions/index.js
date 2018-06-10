@@ -1,6 +1,6 @@
-export function send() {
+export function send () {
   return (dispatch) => {
-    //update reducer
-    //ws.send(state)
+    // update reducer
+    // ws.send(state)
   }
 }
