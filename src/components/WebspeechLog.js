@@ -8,7 +8,6 @@ const mapStateToProps = (state) => ({
 
 class WebspeechLog extends Component {
   render() {
-
     return (
       <h1>{JSON.stringify(this.props)}</h1>
     )

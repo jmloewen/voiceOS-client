@@ -1,4 +1,4 @@
-export default (state = {text:'', isRecording:false}, action) => {
+export const voiceReducer = (state={text:'', isRecording:false}, action) => {
   switch (action.type) {
     case 'VOICE_RECOGNITION':
      return {
@@ -7,10 +7,10 @@ export default (state = {text:'', isRecording:false}, action) => {
      }
      case 'RECORDING_STATE':
      return {
-       text: state.text,
+      text: state.text,
       isRecording: action.isRecording
      }
-   default:
     return state
   }
- }
+  return state
+}
