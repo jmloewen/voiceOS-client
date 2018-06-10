@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ServerStatus from './ServerStatus'
 import VoiceButton from './VoiceButton'
