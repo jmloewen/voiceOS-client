@@ -1,8 +1,11 @@
 export const socketReducer = (state = {}, action) => {
   switch (action.type) {
-  case 'listening':
+  case 'SOCKET_RESPONSE_RECEIVE':
     // state = Object.assign({}, state, { data: action.data, loading: false })
-    return state
+    return {
+      ...state,
+      response: action.response,
+    }
   default:
     return state
   }
