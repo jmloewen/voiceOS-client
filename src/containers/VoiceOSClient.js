@@ -16,9 +16,10 @@ const VoiceOSClient = () => {
 
     return (
       <div className='ClientLayout'>
-        <OutputViewContainer style={styles.temp}/>
-        <InputViewContainer/>
+        <OutputViewContainer/>
         <WebspeechLogContainer/>
+        <InputViewContainer/>
+
       </div>
     )
 }

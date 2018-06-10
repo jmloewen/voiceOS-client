@@ -10,12 +10,17 @@ class InputView extends Component {
   render() {
 
     const {
-      inputStyle
+      inputContainer,
+      inputHeader,
+      inputButton
     } = componentViewStyles;
 
 
     return (
-      <h1 style={inputStyle}>I am InputView</h1>
+      <div style={inputContainer}>
+        <h2 style={inputHeader}>Tap & Speak</h2>
+        <button style={inputButton}>Voice Button</button>
+      </div>
     )
   }
 }

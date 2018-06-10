@@ -10,11 +10,19 @@ class OutputView extends Component {
   render() {
 
     const {
-      outputStyle,
+      outputContainer,
+      outputHeader,
+      outputImageContainer,
+      outputImage
     } = componentViewStyles;
 
     return (
-      <h1 style={outputStyle}>I am OutputView</h1>
+      <div style={outputContainer}>
+        <h2 style={outputHeader}>Current Directory</h2>
+        <div style={outputImageContainer}>
+          <img style={outputImage} src="#"/>
+        </div>
+      </div>
     );
   }
 }

@@ -8,12 +8,16 @@ const mapStateToProps = (state) => ({
 
 class WebspeechLog extends Component {
   render() {
-
     const {
-      webspeechStyle
+      webspeechContainer,
+      webspeechTitle,
+      webspeechOutput
     } = componentViewStyles;
     return (
-      <h1 style={webspeechStyle}>I am WebspeechLog</h1>
+      <div style={webspeechContainer}>
+        <h2 style={webspeechTitle}>I am WebspeechLog</h2>
+        <p style={webspeechOutput}>This is Output</p>
+      </div>
     )
   }
 }
