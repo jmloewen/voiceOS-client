@@ -13,3 +13,24 @@ How to open:
 6. heroku open
 
 walla, its open.  there ya go.
+
+# Set up Redux Dev Tools
+` https://github.com/zalmoxisus/redux-devtools-extension `
+This page has the complete setup
+
+TLDR;
+` yarn add redux-devtools-extension `
+
+Then, in your store, use it like so,
+
+```
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+const store = createStore(reducer, composeWithDevTools(
+  applyMiddleware(...middleware),
+  // other store enhancers if any
+))
+```
+
+
