@@ -1,7 +1,7 @@
 export const recognize = (text) => dispatch => {
   dispatch({
     type: 'VOICE_RECOGNITION',
-   text: text
+    text: text
   })
 }
 
