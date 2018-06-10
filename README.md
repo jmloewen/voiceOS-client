@@ -33,4 +33,6 @@ const store = createStore(reducer, composeWithDevTools(
 ))
 ```
 
-
+# ESLint setup
+` eslint --init` 
+if you dont have it, install eslint yarn package
