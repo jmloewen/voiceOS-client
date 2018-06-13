@@ -5,11 +5,16 @@ const mapStateToProps = (state) => ({
   // TODO
 })
 
+const headerStyle = {
+  color:'green'
+}
+
 class ServerStatus extends Component {
+
   render () {
     return (
       <div className='ServerStatus'>
-        <h3>ServerStatus: </h3>
+        <h3 style={headerStyle}>ServerStatus: </h3>
       </div>
     )
   }

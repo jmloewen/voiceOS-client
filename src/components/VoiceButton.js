@@ -3,6 +3,14 @@ import { recognize, changeRecordingState } from '../actions/VoiceAction'
 import SpeechRecognitionService from '../utils/speechRecognitionService';
 import { connect } from 'react-redux';
 
+const styles = {
+  voiceButton:{
+    border: '1px solid black',
+    float: 'right',
+    position:'relative'
+  }
+}
+
 class VoiceButton extends Component {
 
   componentDidMount() {
@@ -35,7 +43,7 @@ class VoiceButton extends Component {
   render() {
     console.log("this.props: ", this.props)
     return (
-      <button onClick={this.toggleRecording}>{this.props.isRecording ? 'Stop' : 'Start'} recording</button>
+      <button style={styles.voiceButton} onClick={this.toggleRecording}>{this.props.isRecording ? 'Stop' : 'Start'} recording</button>
     );
   }
 }
