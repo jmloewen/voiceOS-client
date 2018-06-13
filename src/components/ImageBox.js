@@ -17,6 +17,13 @@ const catUrl = 'https://lh3.googleusercontent.com/pN9lVcK6P0PB6XwkUyqEGxx-8dll2a
 class ImageBox extends Component {
   render () {
 
+    //https://github.com/kriasoft/react-starter-kit/issues/979
+    function getBGImage(props) {
+      //wrong.  need to fix, but need help on this.
+      const imageUrl = require({props} + ".jpg")
+      return <div style={{backgroundImage:`url(${imageUrl})`}}/>
+    }
+
     return (
       <div className='ImageBox'>
         <div style={styles.outputImage} alt='Test image box' />
