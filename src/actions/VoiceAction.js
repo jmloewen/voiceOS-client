@@ -1,8 +1,14 @@
 export const recognize = (text) => dispatch => {
   dispatch({
     type: 'VOICE_RECOGNITION',
-    text: text
+    recognitionText: text
   })
+}
+
+export const resetVoiceRecognition = () => {
+  return {
+    type: 'RESET_VOICE_RECOGNITION'
+  }
 }
 
 export const changeRecordingState = (recording) => dispatch => {
@@ -15,6 +21,6 @@ export const changeRecordingState = (recording) => dispatch => {
 export const textToSpeech = (detail) => dispatch => {
   dispatch({
     type: 'SPEAK',
-    detail:detail
+    detail: detail
   })
 }

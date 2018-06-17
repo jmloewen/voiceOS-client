@@ -1,6 +1,6 @@
 import React, { Component, createElement} from 'react'
 import { socketResponse, showImage } from '../actions/SocketAction'
-import { textToSpeech } from '../actions/VoiceAction'
+import { textToSpeech, resetVoiceRecognition } from '../actions/VoiceAction'
 import createSocket from "sockette-component"
 import { connect } from 'react-redux'
 
@@ -16,9 +16,9 @@ class SocketContainer extends Component {
     }
 
     componentDidUpdate() {
-        console.log('SocketContainer componentDidUpdate() props: ', this.props);
-        if (this.props.text != "" && this.props.isRecording == false) {
+        if (this.props.recognitionText && this.props.isRecording == false) {
             this.sendMessage();
+            this.props.resetVoice();
         }
     }
 
@@ -28,8 +28,8 @@ class SocketContainer extends Component {
 
     onMessage = ev => {
 
-        //this.props.socketResponse(ev.data)
         let parsedData = JSON.parse(ev.data)
+        this.props.socketResponse(parsedData)
 
         if(!parsedData){return}
 
@@ -43,7 +43,7 @@ class SocketContainer extends Component {
           case 'speak':
             this.props.textToSpeech(aDetail)
             break
-          case "showImage":
+          case "show_image":
             this.props.showImage(aDetail)
             break
           default:
@@ -61,9 +61,16 @@ class SocketContainer extends Component {
 
     sendMessage = _ => {
         // WebSocket available in state!
-        const request = { "speech": this.props.text, "endpoint": "https://hap2a5df4m.execute-api.us-east-1.amazonaws.com/dev/ping", "state": { "directory": "home" } }
-        console.log("VoiceButton this.state: ", this.state)
-        console.log("ws: ", this.state.socket.send(JSON.stringify(request)))
+        let directory = "home"
+        if (this.props.response) {
+            directory = this.props.response.state.directory
+        }
+        const request = {
+            "speech": this.props.recognitionText,
+            "endpoint": "https://hap2a5df4m.execute-api.us-east-1.amazonaws.com/dev/ping",
+            "state": { "directory": directory }
+        }
+        this.state.socket.send(JSON.stringify(request))
     };
 
     setSocket = socket => {
@@ -78,7 +85,7 @@ class SocketContainer extends Component {
                 {
                     this.props.response != null &&
                     <div>
-                    <p>Websocket result: </p> <strong>{this.props.response}</strong>
+                    <p>Websocket result: </p> <strong>{JSON.stringify(this.props.response)}</strong>
                     </div>
                 }
                 <Socket
@@ -103,7 +110,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     socketResponse: (response) => dispatch(socketResponse(response)),
     textToSpeech: (detail) => dispatch(textToSpeech(detail)),
-    showImage: (detail) => dispatch(showImage(detail))
+    showImage: (detail) => dispatch(showImage(detail)),
+    resetVoice: () => dispatch(resetVoiceRecognition())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SocketContainer)

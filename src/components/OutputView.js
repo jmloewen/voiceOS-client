@@ -3,18 +3,16 @@ import Card from '@material-ui/core/Card'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 
-const catUrl = "https://lh3.googleusercontent.com/pN9lVcK6P0PB6XwkUyqEGxx-8dll2aE3In_YwqCOHtmQvAJIv_Rb4iNMMlW4j33sNcXCBsB5qFWZbo2FecHLc-2R9b0"
-
-const currentDirectory = '/home' //Needs to updated
+const currentDirectory = '/home' // Needs to updated
 
 class OutputView extends Component {
-  render() {
+  render () {
     return (
       <Card style={styles.outputStyles}>
         <Typography variant='display2' gutterBottom align='center'>Currently at: {currentDirectory}</Typography>
         <CardMedia
           style={{ height: 400 }}
-          image={catUrl}
+          image={this.props.imageUrl}
         />
       </Card>
     )
