@@ -7,11 +7,24 @@ const mapStateToProps = (state) => ({
   // TODO
 })
 
+const styles={
+  inputContainer: {
+    border: '1px solid black',
+    float:'left',
+    position:'relative',
+    top:'400px',
+    width:'40%',
+    padding:'10px',
+    flex:'1'
+  }
+}
+
 class InputView extends Component {
-  render () {
+  render() {
+
     return (
-      <div className='InputView'>
-        <h1>I am InputView</h1>
+      <div style={styles.inputContainer} className='inputContainer'>
+        <h2>I am InputView</h2>
         <ServerStatus />
         <VoiceButton />
       </div>
