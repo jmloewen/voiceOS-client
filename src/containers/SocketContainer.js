@@ -36,9 +36,9 @@ class SocketContainer extends Component {
         let aType = parsedData.actionType
         let aDetail = parsedData.actionDetail
         //debugging mock:////////////////////
-        aType = 'showImage'
-        aDetail = 'http://www.youtwitface.com/wp-content/uploads/2012/05/kitten-650x488-600x450.jpg'
-          ////////////////////////
+        //aType = 'showImage'
+        //aDetail = 'http://www.youtwitface.com/wp-content/uploads/2012/05/kitten-650x488-600x450.jpg'
+        ////////////////////////
         switch(String(aType)){
           case 'speak':
             this.props.textToSpeech(aDetail)
@@ -50,7 +50,6 @@ class SocketContainer extends Component {
             console.log(parsedData)
             console.log(aType)
             console.log(aDetail)
-
             throw new Error("OH NO! UNRECOGNIZED ACTION!!!!")
         }
 

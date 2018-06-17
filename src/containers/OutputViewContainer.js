@@ -20,7 +20,7 @@ class OutputViewContainer extends Component {
   render() {
     console.log("ImageUrl:", this.props.imageUrl)
     return (
-      <OutputView />
+      <OutputView imageUrl={this.props.imageUrl} />
     )
   }
 }

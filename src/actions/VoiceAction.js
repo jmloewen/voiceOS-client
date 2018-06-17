@@ -13,7 +13,6 @@ export const changeRecordingState = (recording) => dispatch => {
 }
 
 export const textToSpeech = (detail) => dispatch => {
-  console.log("textToSpeech")
   dispatch({
     type: 'SPEAK',
     detail:detail
