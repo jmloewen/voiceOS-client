@@ -6,6 +6,8 @@ export const socketReducer = (state = {}, action) => {
         ...state,
         response: action.response
       }
+    case 'SHOW_IMAGE':
+      return {...state, imageUrl:action.detail}
     default:
       return state
   }

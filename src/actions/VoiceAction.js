@@ -11,3 +11,10 @@ export const changeRecordingState = (recording) => dispatch => {
     isRecording: recording
   })
 }
+
+export const textToSpeech = (detail) => dispatch => {
+  dispatch({
+    type: 'SPEAK',
+    detail:detail
+  })
+}

@@ -36,7 +36,7 @@ class OutputView extends Component {
       <div style={styles.outputContainer}>
         <CurrentDirectory style={styles.outputHeader} />
         <div style={styles.outputImageContainer}>
-          <ImageBox/>
+          <ImageBox imageUrl={this.props.imageUrl}/>
         </div>
       </div>
     );
