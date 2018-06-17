@@ -6,14 +6,6 @@ export const socketResponse = (response) => dispatch => {
   })
 }
 
-export const textToSpeech = (detail) => dispatch => {
-  console.log("textToSpeech")
-  dispatch({
-    type: 'SPEAK',
-    detail:detail
-  })
-}
-
 export const showImage = (detail) => dispatch => {
   console.log("showImage")
   dispatch({

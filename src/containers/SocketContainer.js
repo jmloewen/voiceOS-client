@@ -1,7 +1,8 @@
-import React, { Component, createElement} from 'react';
-import { socketResponse, textToSpeech, showImage } from '../actions/SocketAction'
-import createSocket from "sockette-component";
-import { connect } from 'react-redux';
+import React, { Component, createElement} from 'react'
+import { socketResponse, showImage } from '../actions/SocketAction'
+import { textToSpeech } from '../actions/VoiceAction'
+import createSocket from "sockette-component"
+import { connect } from 'react-redux'
 
 const Socket = createSocket({
   Component,
@@ -34,7 +35,10 @@ class SocketContainer extends Component {
 
         let aType = parsedData.actionType
         let aDetail = parsedData.actionDetail
-
+        //debugging mock:////////////////////
+        aType = 'showImage'
+        aDetail = 'http://www.youtwitface.com/wp-content/uploads/2012/05/kitten-650x488-600x450.jpg'
+          ////////////////////////
         switch(String(aType)){
           case 'speak':
             this.props.textToSpeech(aDetail)
