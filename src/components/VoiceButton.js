@@ -6,13 +6,16 @@ import { connect } from 'react-redux';
 const styles = {
   voiceButton:{
     border: '1px solid black',
-    float: 'right',
-    position:'relative'
+    borderRadius: 5,
+    fontSize: 16,
+    width: 200,
+    height: 55,
+    marginLeft: '30%',
+    marginRight: '30%',
   }
 }
 
 class VoiceButton extends Component {
-
 
   componentDidMount() {
     this.recognition = new SpeechRecognitionService();
