@@ -13,7 +13,6 @@ const styles = {
 
 class VoiceButton extends Component {
 
-
   componentDidMount() {
     this.recognition = new SpeechRecognitionService();
     this.recognition.onEnd(() => {
