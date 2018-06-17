@@ -1,5 +1,5 @@
 import React, { Component, createElement} from 'react';
-import { socketResponse } from '../actions/SocketAction'
+import { socketResponse, textToSpeech, showImage } from '../actions/SocketAction'
 import createSocket from "sockette-component";
 import { connect } from 'react-redux';
 
@@ -26,10 +26,30 @@ class SocketContainer extends Component {
     };
 
     onMessage = ev => {
-        console.log("> Received:", ev.data);
-        this.props.socketResponse(ev.data)
-        //TODO: dispatch action with this ev.data
-        
+
+        //this.props.socketResponse(ev.data)
+        let parsedData = JSON.parse(ev.data)
+
+        if(!parsedData){return}
+
+        let aType = parsedData.actionType
+        let aDetail = parsedData.actionDetail
+
+        switch(String(aType)){
+          case 'speak':
+            this.props.textToSpeech(aDetail)
+            break
+          case "showImage":
+            this.props.showImage(aDetail)
+            break
+          default:
+            console.log(parsedData)
+            console.log(aType)
+            console.log(aDetail)
+
+            throw new Error("OH NO! UNRECOGNIZED ACTION!!!!")
+        }
+
     };
 
     onReconnect = ev => {
@@ -50,10 +70,10 @@ class SocketContainer extends Component {
     }
 
     render() {
-        return(   
+        return(
             <div>
                 {
-                    this.props.response != null && 
+                    this.props.response != null &&
                     <div>
                     <p>Websocket result: </p> <strong>{this.props.response}</strong>
                     </div>
@@ -78,7 +98,9 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    socketResponse: (response) => dispatch(socketResponse(response))
+    socketResponse: (response) => dispatch(socketResponse(response)),
+    textToSpeech: (detail) => dispatch(textToSpeech(detail)),
+    showImage: (detail) => dispatch(showImage(detail))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(SocketContainer)
