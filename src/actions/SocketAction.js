@@ -1,6 +1,6 @@
 export const socketResponse = (response) => dispatch => {
   dispatch({
-    type: 'SOCKET_RESPONSE_RECEIVE',
+    type: 'RECEIVE_SOCKET_RESPONSE',
     response
   })
 }

@@ -1,6 +1,6 @@
 import React, { Component, createElement} from 'react';
 import { socketResponse } from '../actions/SocketAction'
-import createSocket, { Sockette } from "sockette-component";
+import createSocket from "sockette-component";
 import { connect } from 'react-redux';
 
 const Socket = createSocket({
@@ -11,12 +11,11 @@ const Socket = createSocket({
 class SocketContainer extends Component {
     // Socket internal state
     state = {
-        speech: null,
-        endpoint: null,
         socket: null
     }
 
     componentDidUpdate() {
+        console.log('SocketContainer componentDidUpdate() props: ', this.props);
         if (this.props.text != "" && this.props.isRecording == false) {
             this.sendMessage();
         }
@@ -54,9 +53,9 @@ class SocketContainer extends Component {
         return(   
             <div>
                 {
-                    this.state.speech != null && 
+                    this.props.response != null && 
                     <div>
-                    <p>Websocket result: </p> <strong>{this.state.speech}</strong>
+                    <p>Websocket result: </p> <strong>{this.props.response}</strong>
                     </div>
                 }
                 <Socket
@@ -74,7 +73,8 @@ class SocketContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-    ...state.voiceReducer
+    ...state.voiceReducer,
+    response: state.socketReducer.response,
 })
 
 const mapDispatchToProps = dispatch => ({
