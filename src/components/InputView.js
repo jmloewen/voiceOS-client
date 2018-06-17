@@ -1,35 +1,38 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import ServerStatus from './ServerStatus'
+import Card from '@material-ui/core/Card'
+import Typography from '@material-ui/core/Typography'
+
 import VoiceButton from './VoiceButton'
 
-const mapStateToProps = (state) => ({
-  // TODO
-})
-
-const styles={
-  inputContainer: {
-    border: '1px solid black',
-    float:'left',
-    position:'relative',
-    top:'400px',
-    width:'40%',
-    padding:'10px',
-    flex:'1'
-  }
-}
+const serverStatus = 'Connected'
 
 class InputView extends Component {
   render() {
-
     return (
-      <div style={styles.inputContainer} className='inputContainer'>
-        <h2>I am InputView</h2>
-        <ServerStatus />
+      <Card style={styles.inputContainer}>
+        <Typography variant='headline'>ServerStatus:</Typography>
+        <Typography
+          style={{ color: 'green' }}
+          variant='headline'
+          gutterBottom align='center'
+        >
+          {serverStatus}
+        </Typography>
         <VoiceButton />
-      </div>
+      </Card>
     )
   }
 }
 
-export default connect(mapStateToProps)(InputView)
+const styles = {
+  inputContainer: {
+    float: 'left',
+    position: 'absolute',
+    top: '500px',
+    width: '50%',
+    padding: '10px',
+    flex: '1'
+  }
+}
+
+export default InputView
