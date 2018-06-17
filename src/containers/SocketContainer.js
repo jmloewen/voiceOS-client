@@ -29,7 +29,7 @@ class SocketContainer extends Component {
         console.log("> Received:", ev.data);
         this.props.socketResponse(ev.data)
         //TODO: dispatch action with this ev.data
-        
+
     };
 
     onReconnect = ev => {
@@ -50,14 +50,8 @@ class SocketContainer extends Component {
     }
 
     render() {
-        return(   
+        return(
             <div>
-                {
-                    this.props.response != null && 
-                    <div>
-                    <p>Websocket result: </p> <strong>{this.props.response}</strong>
-                    </div>
-                }
                 <Socket
                 url='ws://secure-lowlands-10237.herokuapp.com/websocket/'
                 // url="ws://localhost:8080/websocket/"
