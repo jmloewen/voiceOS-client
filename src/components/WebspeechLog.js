@@ -31,7 +31,7 @@ class WebspeechLog extends Component {
     return (
       <div style={styles.webspeechContainer}>
         <h2 style={styles.webspeechTitle}>{JSON.stringify(this.props)}</h2>
-        <p style={styles.webspeechOutput}>This is Output</p>
+        <p style={styles.webspeechOutput}>This is WebSpeech</p>
       </div>
     )
   }
