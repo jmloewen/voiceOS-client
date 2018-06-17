@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createElement} from 'react';
 import { recognize, changeRecordingState } from '../actions/VoiceAction'
 import SpeechRecognitionService from '../utils/speechRecognitionService';
 import { connect } from 'react-redux';
@@ -12,6 +12,7 @@ const styles = {
 }
 
 class VoiceButton extends Component {
+
 
   componentDidMount() {
     this.recognition = new SpeechRecognitionService();
@@ -41,7 +42,6 @@ class VoiceButton extends Component {
   }
 
   render() {
-    console.log("this.props: ", this.props)
     return (
       <button style={styles.voiceButton} onClick={this.toggleRecording}>{this.props.isRecording ? 'Stop' : 'Start'} recording</button>
     );
@@ -51,11 +51,11 @@ class VoiceButton extends Component {
 
 const mapStateToProps = state => ({
   ...state.voiceReducer
- })
+})
 
- const mapDispatchToProps = dispatch => ({
-   recognize: (text) => dispatch(recognize(text)),
-   changeRecordingState: (isRecording) => dispatch(changeRecordingState(isRecording))
- })
+const mapDispatchToProps = dispatch => ({
+  recognize: (text) => dispatch(recognize(text)),
+  changeRecordingState: (isRecording) => dispatch(changeRecordingState(isRecording))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(VoiceButton)
