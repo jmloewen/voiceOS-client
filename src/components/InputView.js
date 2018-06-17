@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import Card from '@material-ui/core/Card'
 import Typography from '@material-ui/core/Typography'
 
@@ -36,8 +35,4 @@ const styles = {
   }
 }
 
-const mapStateToProps = (state) => ({
-  // TODO
-})
-
-export default connect(mapStateToProps)(InputView)
+export default InputView

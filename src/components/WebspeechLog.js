@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-const mapStateToProps = (state) => ({
-  // TODO
-  ...state.voiceReducer
-})
-
 const styles = {
   webspeechContainer:{
     border: '2px solid black',
@@ -33,5 +28,9 @@ class WebspeechLog extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+  ...state.voiceReducer
+})
 
 export default connect(mapStateToProps)(WebspeechLog)
