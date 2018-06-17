@@ -5905,6 +5905,18 @@ react-event-listener@^0.6.0:
     prop-types "^15.6.0"
     warning "^4.0.1"
 
+react-image-autofit-frame@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-image-autofit-frame/-/react-image-autofit-frame-0.1.0.tgz#75e8ad581d663b1002f6a2ca7648395ce5613384"
+  dependencies:
+    babel-runtime "^6.6.1"
+
+react-image-autofit-frame@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-image-autofit-frame/-/react-image-autofit-frame-0.1.0.tgz#75e8ad581d663b1002f6a2ca7648395ce5613384"
+  dependencies:
+    babel-runtime "^6.6.1"
+
 react-jss@^8.1.0:
   version "8.5.0"
   resolved "https://registry.yarnpkg.com/react-jss/-/react-jss-8.5.0.tgz#a0eff645743082e06a6c42b7c5ab4939d7af4c27"
