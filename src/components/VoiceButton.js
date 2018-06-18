@@ -1,6 +1,6 @@
-import React, { Component, createElement} from 'react';
+import React, { Component } from 'react';
 import { recognize, changeRecordingState } from '../actions/VoiceAction'
-import SpeechRecognitionService from '../utils/speechRecognitionService';
+import SpeechRecognitionService from '../utils/SpeechRecognitionService';
 import { connect } from 'react-redux';
 
 const styles = {
