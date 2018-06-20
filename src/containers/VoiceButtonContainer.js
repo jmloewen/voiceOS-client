@@ -1,10 +1,10 @@
-import React, { Component, createElement} from 'react'
+import React, { Component, createElement } from 'react'
 import { recognize, changeRecordingState } from '../actions/VoiceAction'
 import SpeechRecognitionService from '../utils/speechRecognitionService'
 import { connect } from 'react-redux'
 
 const styles = {
-  voiceButton:{
+  voiceButton: {
     border: '1px solid black',
     borderRadius: 5,
     fontSize: 16,

@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
-
+import { connect } from 'react-redux'
 import WebspeechLog from '../components/WebspeechLog'
 
 class WebspeechLogContainer extends Component {
-  render () {
+  render() {
     return (
-      <WebspeechLog />
+      <WebspeechLog recognizedText={this.props.recognizedText}/>
     )
   }
 }
 
-export default WebspeechLogContainer
+const mapStateToProps = (state) => ({
+  ...state.voiceReducer
+})
+
+export default connect(mapStateToProps)(WebspeechLogContainer)

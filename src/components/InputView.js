@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Card from '@material-ui/core/Card'
 import Typography from '@material-ui/core/Typography'
 
-import VoiceButton from './VoiceButton'
+import VoiceButtonContainer from '../containers/VoiceButtonContainer'
 
 const serverStatus = 'Connected'
 
@@ -18,7 +18,7 @@ class InputView extends Component {
         >
           {serverStatus}
         </Typography>
-        <VoiceButton />
+        <VoiceButtonContainer />
       </Card>
     )
   }
