@@ -10,13 +10,12 @@ const Socket = createSocket({
 });
 
 class SocketContainer extends Component {
-    // Socket internal state
     state = {
         socket: null
     }
 
     componentDidUpdate() {
-        if (this.props.recognitionText && this.props.isRecording == false) {
+        if (this.props.recognitionText && this.props.isRecording === false) {
             this.sendMessage();
             this.props.resetVoice();
         }
