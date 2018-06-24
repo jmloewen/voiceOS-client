@@ -19,7 +19,7 @@ class InputView extends Component {
           {serverStatus}
         </Typography>
         <VoiceButton />
-        <Button variant='outlined' color='secondary' >
+        <Button onClick={this.props.onRasaButtonPressed} variant='outlined' color='secondary' >
           Turn on RASA
         </Button>
 
