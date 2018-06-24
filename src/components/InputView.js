@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Card from '@material-ui/core/Card'
 import Typography from '@material-ui/core/Typography'
-
+import Button from '@material-ui/core/Button'
 import VoiceButton from './VoiceButton'
 
 const serverStatus = 'Connected'
@@ -19,6 +19,10 @@ class InputView extends Component {
           {serverStatus}
         </Typography>
         <VoiceButton />
+        <Button variant='outlined' color='secondary' >
+          Turn on RASA
+        </Button>
+
       </Card>
     )
   }
