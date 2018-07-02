@@ -2,7 +2,6 @@
 
 ##This repo is a front end for our ongoing VoiceOS Project, to be made with React-Redux.
 
-<<<<<<< HEAD
 Heroku is fathomless-earth-13428
 =======
 2. request access by sending me an email address so that I can add you as a contributor to the heroku url.
@@ -39,4 +38,3 @@ const store = createStore(reducer, composeWithDevTools(
 # ESLint setup
 ` eslint --init` 
 if you dont have it, install eslint yarn package
->>>>>>> 5760011232e232da37d1035f4e12e3a6f3ac0cfb
