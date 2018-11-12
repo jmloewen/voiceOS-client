@@ -1,29 +1,27 @@
-#VoiceOS-Client
+# VoiceOS-Client
 
-##This repo is a front end for our ongoing VoiceOS Project, to be made with React-Redux.
+## This repo is a front end for our ongoing VoiceOS Project, to be made with React-Redux.
 
 Heroku is fathomless-earth-13428
 =======
-2. request access by sending me an email address so that I can add you as a contributor to the heroku url.
+1. request access by sending me an email address so that I can add you as a contributor to the heroku url.
 
-3. Install NPM
+2. Install NPM with `npm install`
 
-4. npm install
+3. `heroku git:clone -a fathomless-earth-13428`
 
-5. heroku git:clone -a fathomless-earth-13428
+4. `heroku open`
 
-6. heroku open
-
-walla, its open.  there ya go.
+voilà, its open.  there ya go.
 
 # Set up Redux Dev Tools
-` https://github.com/zalmoxisus/redux-devtools-extension `
-This page has the complete setup
+visit [this page](https://github.com/zalmoxisus/redux-devtools-extension) for set up instructions 
 
-TLDR;
+TL;DR:
 ` yarn add redux-devtools-extension `
 
-Then, in your store, use it like so,
+# Usage
+in your store, add:
 
 ```
 import { createStore, applyMiddleware } from 'redux';
@@ -36,5 +34,5 @@ const store = createStore(reducer, composeWithDevTools(
 ```
 
 # ESLint setup
-` eslint --init` 
-if you dont have it, install eslint yarn package
+1. ensure eslint is installed
+2. ` eslint --init`  
