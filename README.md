@@ -4,7 +4,7 @@
 
 Heroku is fathomless-earth-13428
 =======
-1. request access by sending me an email address so that I can add you as a contributor to the heroku url.
+1. Request access by sending me your email address so that I can add you as a contributor on the heroku url.
 
 2. Install NPM with `npm install`
 
@@ -15,7 +15,7 @@ Heroku is fathomless-earth-13428
 voilà, its open.  there ya go.
 
 # Set up Redux Dev Tools
-visit [this page](https://github.com/zalmoxisus/redux-devtools-extension) for set up instructions 
+Visit [this page](https://github.com/zalmoxisus/redux-devtools-extension) for set up instructions 
 
 TL;DR:
 ` yarn add redux-devtools-extension `
@@ -34,5 +34,5 @@ const store = createStore(reducer, composeWithDevTools(
 ```
 
 # ESLint setup
-1. ensure eslint is installed
+1. Ensure eslint is installed
 2. ` eslint --init`  
