@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { socketReducer } from './socketReducer'
+import { socketReducer } from './SocketReducer'
 import { voiceReducer } from './VoiceReducer'
 
 const rootReducer = combineReducers({

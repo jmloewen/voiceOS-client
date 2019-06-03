@@ -17,6 +17,8 @@ export const voiceReducer = (state = {text: '', isRecording: false}, action) => 
         text: state.text,
         isRecording: action.isRecording
       }
+    default:
+      return state
   }
   return state
 }

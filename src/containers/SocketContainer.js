@@ -16,7 +16,7 @@ class SocketContainer extends Component {
     }
 
     componentDidUpdate() {
-        if (this.props.recognitionText && this.props.isRecording == false) {
+        if (this.props.recognitionText && this.props.isRecording === false) {
             this.sendMessage();
             this.props.resetVoice();
         }
